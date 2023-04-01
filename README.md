@@ -10,7 +10,7 @@ This project is indended mainly for fun and learning purposes. However, you can 
 
 To use `ai-fn` macro, add the following dependency to your `Cargo.toml`:
 
-```
+```toml
 ai-fn-macro = { git = "https://github.com/nikitavbv/ai-fn" }
 ```
 
@@ -18,7 +18,7 @@ Next, [obtain OpenAI token](https://platform.openai.com/account/api-keys) and sa
 
 Use the macro to generate implementations of functions based on signature and text description. Here is an example:
 
-```
+```rust
 use ai_fn_macro::ai_fn;
 
 #[ai_fn("return if number is odd")]
@@ -27,7 +27,7 @@ fn is_odd(number: i32) -> bool;
 
 Once you've annotated your function, you can simply call it like any other function:
 
-```
+```rust
 fn main() {
     println!("is odd: {}", is_odd(42));
 }
