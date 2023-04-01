@@ -1,0 +1,11 @@
+[package]
+name = "ai-fn-macro"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+async-openai = "0.10.1"
+tokio = { version = "1.27.0", features = ["full"] }
